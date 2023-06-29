@@ -46,6 +46,7 @@ x = createRecordFromObject({
 y = FnRunJSONResolver(x, "ad-dn-resolver.json")
 log(y)
 # Expected output: "cn=jdoe,ou=Suspended,ou=Users,dc=local"
+# Note how %idautoPersonSAMAccountName% is replaced with the value of the idautoPersonSAMAccountName property from the record. Resolver return values double as string templates and can embed the value from any property available in the record which is being evaluated. 
 ```
 
 ```sh
